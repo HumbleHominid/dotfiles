@@ -20,7 +20,8 @@ for file in "${src_files[@]}"; do
     fi
     # Append an include to the end of ~/$file to source this $file
     if ! grep -q "source $(pwd)/$file" ~/$file; then
-        printf "\nsource $(pwd)/$file" >> ~/$file
+        printf "\n" >> ~/$file
+        printf "# HumbleHominid\nsource $(pwd)/$file\n# HumbleHominid end\n" >> ~/$file
         printf "Appended source line to $file"
         printf "\n"
     fi
