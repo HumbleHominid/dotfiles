@@ -5,7 +5,7 @@ export DOTFILES=$(pwd)
 
 # Create symlink for .vimrc
 if [ ! -f ~/.vimrc ]; then
-    ln -s $DOTFILES/.vimrc ~/.vimrc
+    ln -sf $DOTFILES/.vimrc ~/.vimrc
 
     printf "Created symlink for .vimrc"
     printf "\n"
